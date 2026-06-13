@@ -95,6 +95,222 @@
         "colors": ["black"],
         "style_tags": ["minimal", "accessories", "everyday"],
         "notes": null
+      },
+      {
+        "id": "w_011",
+        "name": "Red plaid flannel shirt",
+        "category": "tops",
+        "colors": ["red", "black"],
+        "style_tags": ["grunge", "layering", "vintage"],
+        "notes": "Great over tees or knits"
+      },
+      {
+        "id": "w_012",
+        "name": "Leather moto jacket",
+        "category": "outerwear",
+        "colors": ["black"],
+        "style_tags": ["biker", "edgy", "classic"],
+        "notes": "Shoulder details and zip pockets"
+      },
+      {
+        "id": "w_013",
+        "name": "Vintage band tee",
+        "category": "tops",
+        "colors": ["black", "white", "red"],
+        "style_tags": ["vintage", "graphic", "rock"],
+        "notes": "Soft, worn in feel"
+      },
+      {
+        "id": "w_014",
+        "name": "Pleated midi skirt, floral print",
+        "category": "bottoms",
+        "colors": ["cream", "green", "pink"],
+        "style_tags": ["feminine", "cottagecore", "flowy"],
+        "notes": null
+      },
+      {
+        "id": "w_015",
+        "name": "Retro running sneakers",
+        "category": "shoes",
+        "colors": ["white", "blue", "orange"],
+        "style_tags": ["retro", "sporty", "everyday"],
+        "notes": "Lightly used, great for casual looks"
+      },
+      {
+        "id": "w_016",
+        "name": "Gold layered chain necklace",
+        "category": "accessories",
+        "colors": ["gold"],
+        "style_tags": ["minimal", "layering", "accessories"],
+        "notes": "Adds polish to tees and dresses"
+      },
+      {
+        "id": "w_017",
+        "name": "Corduroy dungaree skirt",
+        "category": "bottoms",
+        "colors": ["olive", "brown"],
+        "style_tags": ["retro", "casual", "layering"],
+        "notes": "Adjustable straps"
+      },
+      {
+        "id": "w_018",
+        "name": "Rust corduroy blazer",
+        "category": "outerwear",
+        "colors": ["rust", "orange"],
+        "style_tags": ["retro", "preppy", "textured"],
+        "notes": "Structured shoulders with patch pockets"
+      },
+      {
+        "id": "w_019",
+        "name": "Acid wash denim shorts",
+        "category": "bottoms",
+        "colors": ["light blue", "grey"],
+        "style_tags": ["90s", "grunge", "casual"],
+        "notes": "High rise with frayed hem"
+      },
+      {
+        "id": "w_020",
+        "name": "Satin slip dress, blush pink",
+        "category": "outerwear",
+        "colors": ["blush", "pink"],
+        "style_tags": ["elegant", "lingerie", "night out"],
+        "notes": "Bias-cut and lightweight"
+      },
+      {
+        "id": "w_021",
+        "name": "Black leather mini skirt",
+        "category": "bottoms",
+        "colors": ["black"],
+        "style_tags": ["edgy", "punk", "night out"],
+        "notes": null
+      },
+      {
+        "id": "w_022",
+        "name": "Navy wool pea coat",
+        "category": "outerwear",
+        "colors": ["navy"],
+        "style_tags": ["classic", "tailored", "polished"],
+        "notes": "Double-breasted with brass buttons"
+      },
+      {
+        "id": "w_023",
+        "name": "Floral kimono cover-up",
+        "category": "outerwear",
+        "colors": ["cream", "green", "pink"],
+        "style_tags": ["boho", "flowy", "lightweight"],
+        "notes": "Perfect for layering over dresses"
+      },
+      {
+        "id": "w_024",
+        "name": "Camel trench coat",
+        "category": "outerwear",
+        "colors": ["camel"],
+        "style_tags": ["minimal", "classic", "timeless"],
+        "notes": "Belted waist and storm flap"
+      },
+      {
+        "id": "w_025",
+        "name": "Beige cable-knit cardigan",
+        "category": "tops",
+        "colors": ["beige"],
+        "style_tags": ["cozy", "cottagecore", "layering"],
+        "notes": "Soft wool blend with large buttons"
+      },
+      {
+        "id": "w_026",
+        "name": "Black turtleneck sweater",
+        "category": "tops",
+        "colors": ["black"],
+        "style_tags": ["minimal", "sleek", "layering"],
+        "notes": "Slim fit with soft ribbed trim"
+      },
+      {
+        "id": "w_027",
+        "name": "Olive cargo pants",
+        "category": "bottoms",
+        "colors": ["olive"],
+        "style_tags": ["utilitarian", "streetwear", "relaxed"],
+        "notes": "Multiple pockets and cinch ankle"
+      },
+      {
+        "id": "w_028",
+        "name": "White linen button-up shirt",
+        "category": "tops",
+        "colors": ["white"],
+        "style_tags": ["summer", "relaxed", "classic"],
+        "notes": "Breathable fabric, slightly oversized"
+      },
+      {
+        "id": "w_029",
+        "name": "Red satin heels",
+        "category": "shoes",
+        "colors": ["red"],
+        "style_tags": ["dressy", "glam", "bold"],
+        "notes": "Pointed toe with slim heel"
+      },
+      {
+        "id": "w_030",
+        "name": "Black leather loafers",
+        "category": "shoes",
+        "colors": ["black"],
+        "style_tags": ["preppy", "polished", "classic"],
+        "notes": "Square toe with gold hardware"
+      },
+      {
+        "id": "w_031",
+        "name": "Yellow knit beanie",
+        "category": "accessories",
+        "colors": ["yellow"],
+        "style_tags": ["playful", "streetwear", "bright"],
+        "notes": "Soft ribbed knit"
+      },
+      {
+        "id": "w_032",
+        "name": "Silver hoop earrings",
+        "category": "accessories",
+        "colors": ["silver"],
+        "style_tags": ["minimal", "everyday", "classic"],
+        "notes": "Medium size hoops"
+      },
+      {
+        "id": "w_033",
+        "name": "Plaid wool scarf",
+        "category": "accessories",
+        "colors": ["green", "navy", "red"],
+        "style_tags": ["classic", "cozy", "winter"],
+        "notes": null
+      },
+      {
+        "id": "w_034",
+        "name": "Black leather biker gloves",
+        "category": "accessories",
+        "colors": ["black"],
+        "style_tags": ["edgy", "biker", "winter"],
+        "notes": "Fingerless style with snap closure"
+      },
+      {
+        "id": "w_035",
+        "name": "Black velvet blazer",
+        "category": "outerwear",
+        "colors": ["black"],
+        "style_tags": ["evening", "luxe", "statement"],
+        "notes": "Sharp lapels and fitted waist"
+      },
+      {
+        "id": "w_036",
+        "name": "Sequin mini skirt",
+        "category": "bottoms",
+        "colors": ["silver"],
+        "style_tags": ["party", "glam", "night out"],
+        "notes": "High-rise with shimmer finish"
+      },
+      {
+        "id": "w_037",
+        "name": "Beige espadrille sandals",
+        "category": "shoes",
+        "colors": ["beige"],
+        "style_tags": ["summer", "boho", "casual"],
+        "notes": "Wedge sole and ankle tie"
       }
     ]
   },

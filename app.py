@@ -20,7 +20,7 @@ from utils.data_loader import get_example_wardrobe, get_empty_wardrobe
 
 # ── query handler ─────────────────────────────────────────────────────────────
 
-def handle_query(user_query: str, wardrobe_choice: str) -> tuple[str, str, str]:
+def handle_query(user_query: str, wardrobe_choice: str, require_color: bool = False, require_style: bool = False) -> tuple[str, str, str]:
     """
     Called by Gradio when the user submits a query.
 
@@ -43,8 +43,39 @@ def handle_query(user_query: str, wardrobe_choice: str) -> tuple[str, str, str]:
            string and return it along with session["outfit_suggestion"] and
            session["fit_card"].
     """
-    # TODO: implement this function
-    return "Agent not yet implemented.", "", ""
+    if not user_query or not user_query.strip():
+        return (
+            "Please enter a search query describing what you're looking for.",
+            "",
+            "",
+        )
+
+    wardrobe = get_example_wardrobe() if wardrobe_choice == "Example wardrobe" else get_empty_wardrobe()
+    session = run_agent(user_query, wardrobe, require_color=require_color, require_style=require_style)
+
+    if session.get("error"):
+        return session["error"], "", ""
+
+    selected_item = session.get("selected_item") or {}
+    fallback_note = session.get("fallback_note")
+    price_assessment = session.get("price_assessment")
+
+    listing_lines = [
+        f"{selected_item.get('title', 'No listing found')}",
+        f"Price: ${selected_item.get('price', 'N/A')}",
+        f"Size: {selected_item.get('size', 'N/A')}",
+        f"Platform: {selected_item.get('platform', 'N/A')}",
+        f"Condition: {selected_item.get('condition', 'N/A')}",
+        f"Description: {selected_item.get('description', '')}",
+    ]
+
+    if fallback_note:
+        listing_lines.append(f"Note: {fallback_note}")
+    if price_assessment:
+        listing_lines.append(f"Price assessment: {price_assessment}")
+
+    listing_text = "\n".join(listing_lines)
+    return listing_text, session.get("outfit_suggestion", ""), session.get("fit_card", "")
 
 
 # ── interface ─────────────────────────────────────────────────────────────────
@@ -79,6 +110,10 @@ Describe what you're looking for — include size and price if you want to filte
                 scale=1,
             )
 
+        with gr.Row():
+            require_color = gr.Checkbox(label="Require color match", value=False)
+            require_style = gr.Checkbox(label="Require style token match", value=False)
+
         submit_btn = gr.Button("Find it", variant="primary")
 
         with gr.Row():
@@ -99,19 +134,19 @@ Describe what you're looking for — include size and price if you want to filte
             )
 
         gr.Examples(
-            examples=[[q, "Example wardrobe"] for q in EXAMPLE_QUERIES],
-            inputs=[query_input, wardrobe_choice],
+            examples=[[q, "Example wardrobe", False, False] for q in EXAMPLE_QUERIES],
+            inputs=[query_input, wardrobe_choice, require_color, require_style],
             label="Try these queries",
         )
 
         submit_btn.click(
             fn=handle_query,
-            inputs=[query_input, wardrobe_choice],
+            inputs=[query_input, wardrobe_choice, require_color, require_style],
             outputs=[listing_output, outfit_output, fitcard_output],
         )
         query_input.submit(
             fn=handle_query,
-            inputs=[query_input, wardrobe_choice],
+            inputs=[query_input, wardrobe_choice, require_color, require_style],
             outputs=[listing_output, outfit_output, fitcard_output],
         )
 
